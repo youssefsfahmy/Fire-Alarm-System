@@ -1,0 +1,86 @@
+# Reading C:/intelFPGA_lite/18.1/modelsim_ase/tcl/vsim/pref.tcl
+# do System_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {C:/Users/Safa/Desktop/DSD Project/system.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:01:19 on Dec 06,2019
+# vcom -reportprogress 300 -93 -work work C:/Users/Safa/Desktop/DSD Project/system.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity System
+# -- Compiling architecture Sys of System
+# End time: 21:01:19 on Dec 06,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vcom -93 -work work {C:/Users/Safa/Desktop/DSD Project/System.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:01:19 on Dec 06,2019
+# vcom -reportprogress 300 -93 -work work C:/Users/Safa/Desktop/DSD Project/System.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity System
+# -- Compiling architecture Sys of System
+# End time: 21:01:20 on Dec 06,2019, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs="+acc"  trial
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs=""+acc"" trial 
+# Start time: 21:01:20 on Dec 06,2019
+# ** Error: (vsim-3170) Could not find 'trial'.
+#         Searched libraries:
+#             C:/intelFPGA_lite/18.1/modelsim_ase/altera/vhdl/altera
+#             C:/intelFPGA_lite/18.1/modelsim_ase/altera/vhdl/220model
+#             C:/intelFPGA_lite/18.1/modelsim_ase/altera/vhdl/sgate
+#             C:/intelFPGA_lite/18.1/modelsim_ase/altera/vhdl/altera_mf
+#             C:/intelFPGA_lite/18.1/modelsim_ase/altera/vhdl/altera_lnsim
+#             C:/intelFPGA_lite/18.1/modelsim_ase/altera/vhdl/fiftyfivenm
+#             C:/Users/Safa/Desktop/DSD Project/simulation/modelsim/rtl_work
+#             C:/Users/Safa/Desktop/DSD Project/simulation/modelsim/rtl_work
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO ./System_run_msim_rtl_vhdl.do PAUSED at line 12
+vsim work.system
+# vsim work.system 
+# Start time: 21:01:20 on Dec 06,2019
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.system(sys)
+add wave -position insertpoint  \
+sim:/system/stop
+add wave -position insertpoint  \
+sim:/system/fire
+add wave -position insertpoint  \
+sim:/system/smoke
+add wave -position insertpoint  \
+sim:/system/buzzer
+add wave -position insertpoint  \
+sim:/system/pump
+add wave -position insertpoint  \
+sim:/system/motor
+add wave -position insertpoint  \
+sim:/system/buzz
+force -freeze sim:/system/stop 0 0
+run
+force -freeze sim:/system/stop 1 0
+force -freeze sim:/system/smoke 1 0
+force -freeze sim:/system/fire 0 0
+run
+force -freeze sim:/system/fire 1 0
+force -freeze sim:/system/smoke 0 0
+run
+force -freeze sim:/system/fire 0 0
+force -freeze sim:/system/smoke 1 0
+run

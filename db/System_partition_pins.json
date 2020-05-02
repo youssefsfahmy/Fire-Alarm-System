@@ -1,0 +1,33 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "buzzer",
+					"strict" : false
+				},
+				{
+					"name" : "pump",
+					"strict" : false
+				},
+				{
+					"name" : "motor",
+					"strict" : false
+				},
+				{
+					"name" : "stop",
+					"strict" : false
+				},
+				{
+					"name" : "fire",
+					"strict" : false
+				},
+				{
+					"name" : "smoke",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

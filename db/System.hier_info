@@ -1,0 +1,12 @@
+|System
+stop => buzz.OUTPUTSELECT
+stop => pump2.OUTPUTSELECT
+stop => motor2.OUTPUTSELECT
+fire => buzz.DATAA
+fire => pump2.DATAA
+smoke => motor2.DATAA
+buzzer <= buzz.DB_MAX_OUTPUT_PORT_TYPE
+pump <= pump2.DB_MAX_OUTPUT_PORT_TYPE
+motor <= motor2.DB_MAX_OUTPUT_PORT_TYPE
+
+
